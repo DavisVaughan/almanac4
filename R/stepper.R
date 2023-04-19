@@ -257,6 +257,16 @@ minus_date_stepper <- function(x, y) {
 }
 
 # ------------------------------------------------------------------------------
+
+#' @rawNamespace
+#' if (getRversion() >= "4.3.0") {
+#'   S3method(chooseOpsMethod,almanac_stepper)
+#' }
+chooseOpsMethod.almanac_stepper <- function(x, y, mx, my, cl, reverse) {
+  TRUE
+}
+
+# ------------------------------------------------------------------------------
 # vec_ptype2()
 
 #' @rdname almanac-vctrs-compat
