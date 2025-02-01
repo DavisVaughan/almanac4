@@ -174,6 +174,111 @@ hol_valentines_day <- function(since = NULL, until = NULL) {
   )
 }
 
+#' @export
+#' @rdname holidays
+hol_easter_monday <- function(since = NULL, until = NULL) {
+  out <- yearly(since = since, until = until)
+  out <- recur_on_easter(out)
+  out <- roffset(out, by = 1L)
+  
+  rholiday(
+    rschedule = out,
+    name = "Easter Monday"
+  )
+}
+
+#' @export
+#' @rdname holidays
+hol_maundy_thursday <- function(since = NULL, until = NULL) {
+  out <- yearly(since = since, until = until)
+  out <- recur_on_easter(out)
+  out <- roffset(out, by = -3L)
+  
+  rholiday(
+    rschedule = out,
+    name = "Maundy Thursday"
+  )
+}
+
+#' @export
+#' @rdname holidays
+hol_ascension_day <- function(since = NULL, until = NULL) {
+  out <- yearly(since = since, until = until)
+  out <- recur_on_easter(out)
+  out <- roffset(out, by = 40L)
+  
+  rholiday(
+    rschedule = out,
+    name = "Ascension Day"
+  )
+}
+
+#' @export
+#' @rdname holidays
+hol_whit_monday <- function(since = NULL, until = NULL) {
+  out <- yearly(since = since, until = until)
+  out <- recur_on_easter(out)
+  out <- roffset(out, by = 51L)
+  
+  rholiday(
+    rschedule = out,
+    name = "Whit Monday"
+  )
+}
+
+#' @export
+#' @rdname holidays
+hol_epiphany <- function(since = NULL, until = NULL) {
+  out <- yearly(since = since, until = until)
+  out <- recur_on_month_of_year(out, "January")
+  out <- recur_on_day_of_month(out, 6L)
+  
+  rholiday(
+    rschedule = out,
+    name = "Epiphany"
+  )
+}
+
+#' @export
+#' @rdname holidays
+hol_assumption_day <- function(since = NULL, until = NULL) {
+  out <- yearly(since = since, until = until)
+  out <- recur_on_month_of_year(out, "August")
+  out <- recur_on_day_of_month(out, 15L)
+  
+  rholiday(
+    rschedule = out,
+    name = "Assumption of Mary"
+  )
+}
+
+#' @export
+#' @rdname holidays
+hol_all_saints_day <- function(since = NULL, until = NULL) {
+  out <- yearly(since = since, until = until)
+  out <- recur_on_month_of_year(out, "November")
+  out <- recur_on_day_of_month(out, 1L)
+  
+  rholiday(
+    rschedule = out,
+    name = "All Saint's Day"
+  )
+}
+
+#' @export
+#' @rdname holidays
+hol_immaculuate_conception_day <- function(since = NULL, until = NULL) {
+  out <- yearly(since = since, until = until)
+  out <- recur_on_month_of_year(out, "December")
+  out <- recur_on_day_of_month(out, 8L)
+  
+  rholiday(
+    rschedule = out,
+    name = "Feast of the Immaculate Conception"
+  )
+}
+
+
 # ------------------------------------------------------------------------------
 # US
 
